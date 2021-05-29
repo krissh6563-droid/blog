@@ -7,6 +7,6 @@ class postlist(generic.ListView):
     queryset  = post.objects.filter(status=1).order_by('-created_on')
     template_name  = 'index.html'
 
-class postdetail(generic.DeleteView):
+class postdetail(generic.DetailView):
     model  = post 
     template_name = 'post_detail.html'
